@@ -1,0 +1,2 @@
+class TweetDao < DaoOnMySQL
+end

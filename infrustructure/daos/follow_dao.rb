@@ -1,0 +1,2 @@
+class FollowDao < DaoOnMySQL
+end
