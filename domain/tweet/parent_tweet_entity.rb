@@ -1,2 +1,0 @@
-class ParentTweetEntity < TweetEntity
-end
