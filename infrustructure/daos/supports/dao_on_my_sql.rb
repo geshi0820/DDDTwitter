@@ -11,8 +11,4 @@ end
 
 class DaoOnMySQL < ActiveRecord::Base
   set_table_name self.to_s.delete('Dao').underscore
-
-  def store(params)
-    self.create!(params)
-  end
 end
