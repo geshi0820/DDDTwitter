@@ -22,5 +22,30 @@ module DDDTwitter
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Timezone、Localesの設定
+    config.time_zone = 'Tokyo'
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :ja
+
+    # generatorの設定
+    config.generators do |g|
+      g.javascripts false
+      g.stylesheets false
+      g.helper false
+      g.template_engine :slim
+      g.orm :active_record
+      g.test_framework :rspec,
+        fixture: true,
+        view_specs: false,
+        helper_specs: false,
+        routing_specs: false,
+        controller_specs: true,
+        request_specs: true
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+    end
+
+    # ローカルでもキャッシュを用いる
+    config.action_controller.perform_caching = true
   end
 end
