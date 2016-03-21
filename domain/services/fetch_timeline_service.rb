@@ -1,4 +1,4 @@
-class TimelineService
+class FetchTimelineService
   def initialize(user)
     @user = user
   end

@@ -9,6 +9,7 @@ group :default do
   gem 'uglifier'
   gem 'coffee-rails'
   gem 'bcrypt', '~> 3.1.7'
+  gem 'slim'
 end
 
 

@@ -6,7 +6,7 @@ class Repository
       dao.find(id)
     end
 
-    def create(params)
+    def store(params)
       dao.create(params)
     end
 

@@ -6,7 +6,7 @@ class User < Entity
   end
 
   def account_update(user_info)
-    account_update_service = UserAccountUpdateService.new(self, user_info)
+    account_update_service = CreateUserAccountService.new(self, user_info)
     account_update_service.regist!
     account_update_service.instance
   end
